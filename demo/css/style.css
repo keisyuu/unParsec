@@ -15,8 +15,14 @@ body, html {
 .bp-text-blue {
     color: #116cb2!important;
 }
-.w3-bar .w3-button {
+
+#navbar .w3-bar,
+#navbar .w3-button {
     padding: 16px;
+}
+#navbar .w3-button:hover {
+    color:inherit!important;
+    background: none!important;
 }
 .goastBt {
     color:#fff;
@@ -25,15 +31,11 @@ body, html {
     border-radius: 10px;
 }
 .goastBt:hover {
-    color:#116cb2!important;
+    color:#fff!important;
+    background-color:rgba(0, 0, 0, 0.6)!important;
 } 
 #home, #pricing {
-    background-position: center;
-    background-size: cover;
-    /*background-image: url("../img/hero.jpg");*/
     min-height: 100%;
-
-    background-attachment: fixed;
 }
 video {
     position: fixed;
