@@ -9,15 +9,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Favicon begin -->
-<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="194x194" href="/favicons/favicon-194x194.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-<link rel="manifest" href="/favicons/manifest.json">
-<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#116cb2">
-<link rel="shortcut icon" href="/favicons/favicon.ico">
-<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="./favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+<link rel="manifest" href="./favicons/manifest.json">
+<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#116cb2">
+<meta name="msapplication-config" content="./favicons/browserconfig.xml">
 <meta name="theme-color" content="#116cb2">
 <!-- Favicon end -->
 <body>
@@ -30,6 +30,9 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-text-white" id="navbar">
+    <a href="#home" class="w3-bar-item w3-left w3-button" id="logoBar">
+      <img src="./img/logoTextNew.svg" alt="">
+    </a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
@@ -39,7 +42,6 @@
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
@@ -47,33 +49,27 @@
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item">CONTACT</a>
 </nav>
 
 <!-- Header with full-height image -->
-<header class="w3-display-container" id="home">  
-  <div class="w3-display-middle w3-text-white w3-center" id="heroText">
+<header class="w3-display-container" id="home">
+  
+  <div class="w3-display-middle w3-text-white w3-center" id="heroText">   
+    <img id="logo" src="./img/logoShape.svg" alt=""/>
     <span class="w3-jumbo w3-hide-small">Start from here</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start from here</span><br>
     <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
     <p><a class="w3-button w3-padding-large w3-large w3-margin-top goastBt" onclick="document.getElementById('ticketModal').style.display='block'">So start today</a></p>
   </div> 
 </header>
+
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-center w3-padding-64 w3-white">
   <div class="w3-quarter">
@@ -93,29 +89,23 @@
     <br>Meetings
   </div>
 </div>
+
 <!-- Illustrazione Section -->
 <div class="w3-center w3-white" style="height:700px">
-  <h1 class="bp-text-blue w3-center " style="padding:300px auto;margin-top: 0px;">sono illustrazione</h1>
+  <h1 class="bp-text-blue w3-center " style=" margin-top: 0px;">sono illustrazione</h1>
 </div>
+
 <!-- Who Trust Section -->
-<div class="w3-container w3-white" style="padding:128px 16px" id="about">
+<div class="w3-container w3-white" id="client">
   <h1 class="w3-center bp-text-blue">WHO TRUST US</h1>
   <p class="w3-center w3-large">Lorem ipsum dolor sit amet</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-    </div>
+  <div class="w3-row " id="clientLogos">
+    <img class="w3-third" src="./img/ntt.png" alt="NTT DATA">
+    <img class="w3-third" src="./img/cisco.png" alt="CISCO">
+    <img class="w3-third" src="./img/accenture.png" alt="accenture">
   </div>
 </div>
+
 <!-- Pricing Section -->
 <div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
   <h1 class="w3-text-white">PRICING</h1>
@@ -153,7 +143,6 @@
         </li>
       </ul>
     </div>
-
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
         <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
@@ -170,29 +159,9 @@
         </li>
       </ul>
     </div>
-
-<!-- Ticket Modal -->
-    <div id="ticketModal" class="w3-modal">
-      <div class="w3-modal-content w3-animate-top w3-card-4">
-        <header class="w3-container bp-blue w3-center w3-padding-32"> 
-          <span onclick="document.getElementById('ticketModal').style.display='none'" 
-         class="w3-button bp-blue w3-xlarge w3-display-topright">×</span>
-          <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-        </header>
-        <div class="w3-container">
-          <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-          <input class="w3-input w3-border" type="text" placeholder="How many?">
-          <p><label><i class="fa fa-user"></i> Send To</label></p>
-          <input class="w3-input w3-border" type="text" placeholder="Enter email">
-          <button class="w3-button w3-block bp-blue w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-          <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-          <p class="w3-right">Need <a href="#" class="bp-text-blue">help?</a></p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-opacity w3-padding-64">
   <p>Lorem ipsum dolor sit amet.</p>
@@ -202,6 +171,28 @@
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </footer>
+
+<!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top  w3-card-4">
+      <header class="w3-container bp-blue w3-opacity w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button bp-blue w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide w3-text-white"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block bp-blue w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="bp-text-blue">help?</a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 <script>
 // Toggle between showing and hiding the sidebar when clicking the menu icon
@@ -226,14 +217,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var changePoint = document.getElementById('home').offsetHeight-document.getElementById('navbar').offsetHeight;
     var navbar = document.getElementById("navbar");
     if (scroll > changePoint) {     
-      navbar.classList.add('bp-text-blue');
-      navbar.classList.add('w3-white');
-      navbar.classList.add('w3-card-2');
+      navbar.classList.add('bp-text-blue');    
+      if(window.innerWidth > 600) {
+        navbar.classList.add('w3-white');
+        navbar.classList.add('w3-card-2');
+      }
+      navbar.classList.add('w3-animate-top');
     }
     else {
       navbar.classList.remove('bp-text-blue');
       navbar.classList.remove('w3-white');
       navbar.classList.remove('w3-card-2');
+      navbar.classList.remove('w3-animate-top');
     }
   })
   

@@ -4,6 +4,9 @@ body, html {
     line-height: 1.2; 
     color: #666;
 }
+img {
+  pointer-events: none;
+}
 .bp-blue {
     color: #fff!important;
     background-color: #116cb2!important;
@@ -23,6 +26,24 @@ body, html {
 #navbar .w3-button:hover {
     color:inherit!important;
     background: none!important;
+}
+#logoBar {
+    padding: 10px 16px!important;
+}
+#logoBar img {
+    height: 32px;
+}
+.w3-sidebar {
+    color:#fff;
+    background-color:rgba(0, 0, 0, 0.6)!important;
+}
+.w3-sidebar a {
+    color:inherit;
+    text-decoration: none;
+}
+.w3-sidebar a:hover {
+    color:inherit;
+    background-color: #116cb2!important;
 }
 .goastBt {
     color:#fff;
@@ -48,6 +69,18 @@ video {
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
 }
+
 #heroText {
-    top: 65%;
+    top: 60%;
+}
+#logo {
+    display: block;
+    margin: auto;
+    width: 150px;
+}
+#client {
+    padding: 128px 64px;
+}
+#client img {
+    padding: 32px 64px;
 }
