@@ -11,6 +11,9 @@ img {
     color: #fff!important;
     background-color: #116cb2!important;
 }
+.bp-hover-text-blue:hover {
+    color: #116cb2!important;
+}
 .bp-blue-dark {
     color: #fff!important;
     background-color: #0d5185!important;
@@ -46,7 +49,7 @@ img {
     border-radius: 10px;
 }
 .goastBt:hover {
-    color:#fff!important;
+    color: inherit!important;
     background-color:rgba(0, 0, 0, 0.6)!important;
 } 
 #home, #pricing {
@@ -56,17 +59,16 @@ video {
     position: fixed;
     top: 50%;
     left: 50%;
-    min-width: 100%;
+    
     min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 1920px;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
 }
 
 #heroText {
-    top: 58%;
-    width:90%;
+    top: 62%;
+    width: 90%;
     max-width: 1100px;
 }
 #logoText {
@@ -74,13 +76,27 @@ video {
     margin: 8px 16px;
 }
 #logoShape {
+
     display: block;
-    margin: auto;
-    width: 150px;
+    display: none;
+    margin: 32px auto;
+    width: 200px;
 }
 #client {
     padding: 128px 0;
 }
 #client img {
     padding: 32px 96px
+}
+#pricing {
+    padding:64px 16px;
+    background:  #116cb2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #083659 , #116cb2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #083659, #116cb2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #083659, #116cb2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #083659 , #116cb2); /* Standard syntax */
+
+}
+#buy {
+    height:660px;
 }
