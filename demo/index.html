@@ -32,12 +32,12 @@
   <div class="w3-bar w3-text-white" id="navbar">
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Technology</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Solutions</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact Us</a>
+      <a href="#tech" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Technology</a>
+      <a href="#solutions" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Solutions</a>
+      <a class="w3-bar-item w3-button" onclick="document.getElementById('ticketModal').style.display='block'"><i class="fa fa-envelope"></i> Contact Us</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+    <a href="javascript:void(0)" id="sideBarIcon" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium " onclick="w3_open()" >
       <i class="fa fa-bars"></i>
     </a>
   </div>
@@ -46,9 +46,9 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right w3-hide-medium w3-hide-large" style="display:none;right:0;" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item">Technology</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item">Solutions</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item">Contact Us</a>
+  <a href="#tech" onclick="w3_close()" class="w3-bar-item">Technology</a>
+  <a href="#solutions" onclick="w3_close()" class="w3-bar-item">Solutions</a>
+  <a href="#contact" onclick="w3_close();document.getElementById('ticketModal').style.display='block'" class="w3-bar-item">Contact Us</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -64,85 +64,87 @@
   </div> 
 </header>
 
-<!-- Promo Section "Statistics" -->
+<!-- Numbers Section -->
 <div class="w3-container w3-center w3-padding-64 w3-white" id="numbers">
   <div class="w3-third">
-    <h1 class="bp-text-blue">50</h1>
+    <h1 class="w3-jumbo bp-text-blue">50</h1>
     <p class="w3-xlarge w3-text-grey">Additional Profile Data</p>
   </div>
   <div class="w3-third">
-    <h1 class="bp-text-blue">+30%</h1>
+    <h1 class="w3-jumbo bp-text-blue">+30%</h1>
     <p class="w3-xlarge w3-text-grey">Convertion Rate</p>
   </div>
   <div class="w3-third">
-    <h1 class="bp-text-blue">-20%</h1>
+    <h1 class="w3-jumbo bp-text-blue">-20%</h1>
     <p class="w3-xlarge w3-text-grey">Churn Rate</p>
   </div>
 </div>
 
 <!-- Illustrazione Section -->
-<div class="w3-center w3-white" style="height:500px">
+<div id="tech" class="w3-center w3-white" style="height:500px">
   <h1 class="bp-text-blue w3-center " style=" margin-top: 0px;">sono illustrazione</h1>
 </div>
 
 <!-- Who Trust Section -->
-<div class="w3-container w3-white" id="client">
-  <h1 class="w3-center bp-text-blue">Trusted by</h1>
+<div class="w3-container w3-center w3-padding-64 w3-white" id="client">
+  <h1 class="w3-jumbo w3-center bp-text-blue w3-hide-small">Trusted by</h1>
+  <h1 class="w3-xxlarge w3-center bp-text-blue w3-hide-large w3-hide-medium">Trusted by</h1>
   <div class="w3-row w3-center" id="clientLogos">
-    <img class="w3-third" src="./img/ntt.png" alt="NTT DATA">
-    <img class="w3-third" src="./img/cisco.png" alt="CISCO">
-    <img class="w3-third" src="./img/accenture.png" alt="accenture">
+    <div class="w3-third"><img src="./img/ntt.png" alt="NTT DATA"></div>
+    <div class="w3-third"><img src="./img/cisco.png" alt="CISCO"></div>
+    <div class="w3-third"><img src="./img/accenture.png" alt="accenture"></div>  
   </div>
 </div>
 
-<!-- Pricing Section -->
-<div class="w3-container w3-center " id="pricing">
-  <h1 class="w3-text-white">Optimize Marketing & CRM</h1>
+<!-- Solutions Section -->
+<div class="w3-container w3-center bp-blue" id="solutions">
+  <h1 class="w3-jumbo w3-center w3-text-white w3-hide-small">Optimize Marketing & CRM</h1>
+  <h1 class="w3-xxlarge w3-center w3-text-white w3-hide-large w3-hide-medium">Optimize Marketing & CRM</h1>
   <div class="w3-row-padding" style="margin-top:64px">
-
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-white w3-xlarge w3-padding-32 bp-text-blue" style="border: none">Profile Enrichment</li>
-        <li class="w3-padding-16" style="font-size: 18px; border: none"><b>Enrich profiles of leads and customers</b></li>
-        <li class="w3-padding-16" style="border: none;">Add 50 data fields to poor leads and customers profiles. Append information about interests, job, education, income, housing and marital status to each customer or lead profile.</li>
-        <li class="w3-padding-24" style="border: none">
-          <button class="w3-button bp-text-blue goastBt w3-padding-large" style="border-color: #116cb2" onclick="document.getElementById('ticketModal').style.display='block'">Enrich profiles</button>
-        </li>
-      </ul>
+    <div class="w3-third">
+      <div class="w3-white w3-hover-shadow">
+        <header>
+          <h2 class="bp-text-blue">Profile Enrichment</h2>
+        </header>
+        <h4 class="w3-text-black">Enrich profiles of leads and customers</h3>
+        <p class="w3-text-grey">Add 50 data fields to poor leads and customers profiles. Append information about interests, job, education, income, housing and marital status to each customer or lead profile.</p>
+        <button class="w3-button goastBt-white w3-padding-large">Enrich profiles</button>
+      </div>
     </div>
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-white w3-xlarge w3-padding-32 bp-text-blue" style="border: none">Leads Scoring</li>
-        <li class="w3-padding-16" style="font-size: 18px; border: none"><b>Target sales by purchase propensity</b></li>
-        <li class="w3-padding-16" style="border: none">Score willingness to buy using the power of Profile Enrichment and Artificial Intelligence. Target sales, up-selling and cross-selling knowing the probability that a specific lead would buy a specific product.</li>
-        <li class=" w3-padding-24" style="border: none">
-          <button class="w3-button bp-text-blue goastBt w3-padding-large" style="border-color: #116cb2" onclick="document.getElementById('ticketModal').style.display='block'">Predict buyers</button>
-        </li>
-      </ul>
+    <div class="w3-third">
+      <div class="w3-white w3-hover-shadow" >
+        <header>
+          <h2 class="bp-text-blue">Leads Scoring</h2>
+        </header>
+        <h4 class="w3-text-black">Target sales by purchase propensity</h3>
+        <p class="w3-text-grey">Score willingness to buy using the power of Profile Enrichment and Artificial Intelligence. Target sales, up-selling and cross-selling knowing the probability that a specific lead would buy a specific product.</p>
+        <button class="w3-button goastBt-white w3-padding-large">Predict buyers</button>
+      </div>
     </div>
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-white w3-xlarge w3-padding-32 bp-text-blue" style="border: none">Churn Prediction</li>
-        <li class="w3-padding-16" style="font-size: 18px; border: none"><b>Protect your Customer Base</b></li>
-        <li class="w3-padding-16" style="border: none">Score willingness to leave using the power of Profile Enrichment and Artificial Intelligence. Boost anti-churn campaigns knowing the probability that a specific customer would leave a specific service.</li>
-        <li class="w3-padding-24" style="border: none">
-          <button class="w3-button bp-text-blue goastBt w3-padding-large" style="border-color: #116cb2" onclick="document.getElementById('ticketModal').style.display='block'">Predict churners</button>
-        </li>
-      </ul>
+    <div class="w3-third">
+      <div class="w3-white w3-hover-shadow">
+        <header>
+          <h2 class="bp-text-blue">Churn Prediction</h2>
+        </header>
+        <h4 class="w3-text-black">Protect your Customer Base</h3>
+        <p class="w3-text-grey">Score willingness to leave using the power of Profile Enrichment and Artificial Intelligence. Boost anti-churn campaigns knowing the probability that a specific customer would leave a specific service.</p>
+        <button class="w3-button goastBt-white w3-padding-large">Predict churners</button>
+      </div>
     </div>
-
+    
   </div>
 </div>
-<!-- Promo Section "Statistics" -->
-<div class="w3-display-container w3-center w3-white" id="last">
-<!--
-  <video poster="./img/gray.jpg" id="videoGray" playsinline autoplay muted loop>
-      <source src="./img/gray.mp4">
-  </video>
--->
+
+<!-- Last Section -->
+<div class="w3-display-container w3-center" id="last">
+
+<video poster="./img/gray.jpg" id="videoGray" class="w3-grayscale" playsinline autoplay muted loop>
+    <source src="./img/gray.mp4">
+</video>
+
   <div class="w3-display-middle" >
     <h1 class="bp-text-blue">Unchain the power of<br>Profile Enrichment and AI Predictions</h1>
-    <p><a class="w3-button w3-padding-large w3-large w3-margin-top w3-text-white bp-blue" onclick="document.getElementById('ticketModal').style.display='block'">Book a demo</a></p>
+    <p><a class="w3-button w3-padding-large w3-large w3-margin-top goastBt-white" onclick="document.getElementById('ticketModal').style.display='block'">Book a demo</a></p>
   </div>
 
 
@@ -175,7 +177,7 @@
         
         <input class="w3-input w3-border" type="text" placeholder="Your message">
 
-        <button class="w3-button w3-block w3-padding-16 w3-center">Contact</button>
+        <button class="w3-button w3-block w3-padding-16 w3-center bp-bt-blue">Contact</button>
         
       </div>
     </div>
@@ -200,6 +202,10 @@ function w3_close() {
 }
 //change navbar style when leave the 1st scene
 document.addEventListener('DOMContentLoaded', function() {
+  if(window.innerWidth < 600){
+      document.getElementById('logoText').classList.add('w3-display-topmiddle');
+    }
+
   window.addEventListener('scroll', function(e) {
     var scroll = window.scrollY;
     var changePoint = document.getElementById('home').offsetHeight-document.getElementById('navbar').offsetHeight;
@@ -210,6 +216,10 @@ document.addEventListener('DOMContentLoaded', function() {
         navbar.classList.add('w3-white');
         navbar.classList.add('w3-card-2');
       }
+      else {
+         document.getElementById('sideBarIcon').classList.add('w3-white');
+         document.getElementById('sideBarIcon').classList.add('w3-card');
+      }
       navbar.classList.add('w3-animate-top');
     }
     else {
@@ -217,7 +227,19 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.classList.remove('w3-white');
       navbar.classList.remove('w3-card-2');
       navbar.classList.remove('w3-animate-top');
+      document.getElementById('sideBarIcon').classList.remove('w3-white');
+      document.getElementById('sideBarIcon').classList.remove('w3-card');
     }
+  })
+
+  window.addEventListener('resize', function(e){
+    if(window.innerWidth < 600){
+      document.getElementById('logoText').classList.add('w3-display-topmiddle');
+    }
+    else {
+      document.getElementById('logoText').classList.remove('w3-display-topmiddle');
+    }
+    
   })
   
 });
