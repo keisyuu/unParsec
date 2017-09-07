@@ -23,8 +23,8 @@
 <body>
 
 <!-- Video background for full site -->
-<video poster="./img/hero.jpg" id="bgvid" playsinline autoplay muted loop>
-    <source src="./img/bg.mp4">
+<video poster="./img/hero.jpg" id="videoHero" playsinline autoplay muted loop>
+    <source src="./img/hero.mp4">
 </video>
 
 <!-- Navbar (sit on top) -->
@@ -44,13 +44,11 @@
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right w3-hide-medium w3-hide-large" style="display:none;right:0;" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item">CONTACT</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item">Technology</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item">Solutions</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item">Contact Us</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -67,23 +65,23 @@
 </header>
 
 <!-- Promo Section "Statistics" -->
-<div class="w3-container w3-center w3-padding-64 w3-white">
+<div class="w3-container w3-center w3-padding-64 w3-white" id="numbers">
   <div class="w3-third">
-    <h1 class="w3-xxlarge">50</h1>
-    <br>Additional Profile Data
+    <h1 class="bp-text-blue">50</h1>
+    <p class="w3-xlarge w3-text-grey">Additional Profile Data</p>
   </div>
   <div class="w3-third">
-    <h1 class="w3-xxlarge">+30%</h1>
-    <br>Convertion Rate
+    <h1 class="bp-text-blue">+30%</h1>
+    <p class="w3-xlarge w3-text-grey">Convertion Rate</p>
   </div>
   <div class="w3-third">
-    <h1 class="w3-xxlarge">-20%</h1>
-    <br>Churn Rate
+    <h1 class="bp-text-blue">-20%</h1>
+    <p class="w3-xlarge w3-text-grey">Churn Rate</p>
   </div>
 </div>
 
 <!-- Illustrazione Section -->
-<div class="w3-center w3-white" style="height:700px">
+<div class="w3-center w3-white" style="height:500px">
   <h1 class="bp-text-blue w3-center " style=" margin-top: 0px;">sono illustrazione</h1>
 </div>
 
@@ -101,65 +99,54 @@
 <div class="w3-container w3-center " id="pricing">
   <h1 class="w3-text-white">Optimize Marketing & CRM</h1>
   <div class="w3-row-padding" style="margin-top:64px">
+
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 10</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large"  onclick="document.getElementById('ticketModal').style.display='block'">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="bp-blue w3-xlarge w3-padding-48">Pro</li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large"  onclick="document.getElementById('ticketModal').style.display='block'">Sign Up</button>
+        <li class="w3-white w3-xlarge w3-padding-32 bp-text-blue" style="border: none">Profile Enrichment</li>
+        <li class="w3-padding-16" style="font-size: 18px; border: none"><b>Enrich profiles of leads and customers</b></li>
+        <li class="w3-padding-16" style="border: none;">Add 50 data fields to poor leads and customers profiles. Append information about interests, job, education, income, housing and marital status to each customer or lead profile.</li>
+        <li class="w3-padding-24" style="border: none">
+          <button class="w3-button bp-text-blue goastBt w3-padding-large" style="border-color: #116cb2" onclick="document.getElementById('ticketModal').style.display='block'">Enrich profiles</button>
         </li>
       </ul>
     </div>
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large"  onclick="document.getElementById('ticketModal').style.display='block'">Sign Up</button>
+        <li class="w3-white w3-xlarge w3-padding-32 bp-text-blue" style="border: none">Leads Scoring</li>
+        <li class="w3-padding-16" style="font-size: 18px; border: none"><b>Target sales by purchase propensity</b></li>
+        <li class="w3-padding-16" style="border: none">Score willingness to buy using the power of Profile Enrichment and Artificial Intelligence. Target sales, up-selling and cross-selling knowing the probability that a specific lead would buy a specific product.</li>
+        <li class=" w3-padding-24" style="border: none">
+          <button class="w3-button bp-text-blue goastBt w3-padding-large" style="border-color: #116cb2" onclick="document.getElementById('ticketModal').style.display='block'">Predict buyers</button>
         </li>
       </ul>
     </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-white w3-xlarge w3-padding-32 bp-text-blue" style="border: none">Churn Prediction</li>
+        <li class="w3-padding-16" style="font-size: 18px; border: none"><b>Protect your Customer Base</b></li>
+        <li class="w3-padding-16" style="border: none">Score willingness to leave using the power of Profile Enrichment and Artificial Intelligence. Boost anti-churn campaigns knowing the probability that a specific customer would leave a specific service.</li>
+        <li class="w3-padding-24" style="border: none">
+          <button class="w3-button bp-text-blue goastBt w3-padding-large" style="border-color: #116cb2" onclick="document.getElementById('ticketModal').style.display='block'">Predict churners</button>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>
 <!-- Promo Section "Statistics" -->
-<div class="w3-container w3-center w3-white w3-padding-64" id="buy">
-<!-- 
-  <video poster="./img/hero.jpg" id="bgvid" playsinline autoplay muted loop>
-    <source src="./img/turing.mp4">
+<div class="w3-display-container w3-center w3-white" id="last">
+<!--
+  <video poster="./img/gray.jpg" id="videoGray" playsinline autoplay muted loop>
+      <source src="./img/gray.mp4">
   </video>
 -->
-  <h1 class="bp-text-blue">Unchain the power of Profile Enrichment and AI Predictions</h1>
-    <p><a class="w3-button w3-padding-large w3-large w3-margin-top goastBt" onclick="document.getElementById('ticketModal').style.display='block'">Book a demo</a></p>
+  <div class="w3-display-middle" >
+    <h1 class="bp-text-blue">Unchain the power of<br>Profile Enrichment and AI Predictions</h1>
+    <p><a class="w3-button w3-padding-large w3-large w3-margin-top w3-text-white bp-blue" onclick="document.getElementById('ticketModal').style.display='block'">Book a demo</a></p>
+  </div>
+
+
+  
 </div>
 
 <!-- Footer -->
@@ -174,21 +161,22 @@
 
 <!-- Ticket Modal -->
   <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top  w3-card-4">
-      <header class="w3-container bp-blue w3-opacity w3-center w3-padding-32"> 
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      
+      <header class="w3-container w3-center w3-padding-32"> 
         <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button bp-blue w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide w3-text-white"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+       class="w3-button bp-text-blue w3-xxlarge w3-display-topright" >×</span>
+        <h2 class="w3-wide bp-text-blue">Contact our expert</h2>
       </header>
+
       <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block bp-blue w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="bp-text-blue">help?</a></p>
-      </div>
+        
+        <input class="w3-input w3-border" type="text" placeholder="Your business email">
+        
+        <input class="w3-input w3-border" type="text" placeholder="Your message">
+
+        <button class="w3-button w3-block w3-padding-16 w3-center">Contact</button>
+        
       </div>
     </div>
   </div>
