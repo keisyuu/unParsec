@@ -5,9 +5,22 @@ body, html {
 }
 header {
     overflow: hidden;
+    min-height: 100%;
 }
 img {
   pointer-events: none;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;   
+    min-height: 100%;
+    width: 1920px;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 .w3-button {
     border-radius: 10px;
@@ -102,21 +115,6 @@ img {
     background-color: #116cb2!important;
 }
 
-#home {
-    min-height: 100%;
-}
-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;   
-    min-height: 100%;
-    width: 1920px;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-}
-
 #heroText {
     top: 55%;
     width: 90%;
@@ -169,7 +167,6 @@ video {
     background-size: cover; 
 }
 #videoGray {
-    position: absolute;
     height: auto;
     z-index: -99;
 }
