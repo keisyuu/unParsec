@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<title>BigProfiles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Favicon begin -->
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="./favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+<link rel="manifest" href="./favicons/manifest.json">
+<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#116cb2">
+<meta name="msapplication-config" content="./favicons/browserconfig.xml">
+<meta name="theme-color" content="#116cb2">
+<!-- Favicon end -->
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-text-white" id="navbar">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#tech" class="w3-bar-item w3-button"><i class="fa fa-id-card-o"></i> Technology</a>
+      <a href="#solutions" class="w3-bar-item w3-button"><i class="fa fa-sitemap"></i> Solutions</a>
+      <a class="w3-bar-item w3-button" onclick="document.getElementById('ticketModal').style.display='block'"><i class="fa fa-envelope"></i> Contact Us</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" id="sideBarIcon" class="w3-bar-item w3-right w3-hide-large w3-hide-medium " onclick="w3_open()" >
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right w3-hide-medium w3-hide-large" style="display:none;right:0;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-large w3-padding-16">Close ×</a>
+  <a href="#tech" onclick="w3_close()" class="w3-bar-item">Technology</a>
+  <a href="#solutions" onclick="w3_close()" class="w3-bar-item">Solutions</a>
+  <a href="#contact" onclick="w3_close();document.getElementById('ticketModal').style.display='block'" class="w3-bar-item">Contact Us</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="w3-display-container" id="home">
+  <!-- Video background -->
+  <video poster="./img/hero.jpg" id="videoHero" playsinline autoplay muted loop>
+      <source src="./img/hero.mp4">
+  </video>
+  <img id="logoText" src="./img/logoTextNew.svg" alt="">
+  <div class="w3-display-middle w3-text-white w3-center" id="heroText">   
+<!--    <img id="logoShape" src="./img/logoShape.svg" alt=""/>-->
+    <img id="logoShape" src="./img/logoOutLine.svg" alt=""/>
+    <span class="w3-jumbo w3-hide-small">Get to know your customers</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Get to know your customers</span><br>
+    <span class="w3-large">Unchain the power of Profile Enrichment and AI Predictions</span>
+    <p><a class="w3-button w3-padding-large w3-large w3-margin-top goastBt" onclick="document.getElementById('ticketModal').style.display='block'">Book a demo</a></p>
+  </div> 
+</header>
+
+<!-- Numbers Section -->
+<div class="w3-container w3-center w3-padding-64 w3-white" id="numbers">
+  <div class="w3-third">
+    <h1 class="w3-jumbo bp-text-blue">50</h1>
+    <p class="w3-xlarge w3-text-grey">Additional Profile Data</p>
+  </div>
+  <div class="w3-third">
+    <h1 class="w3-jumbo bp-text-blue">+30%</h1>
+    <p class="w3-xlarge w3-text-grey">Convertion Rate</p>
+  </div>
+  <div class="w3-third">
+    <h1 class="w3-jumbo bp-text-blue">-20%</h1>
+    <p class="w3-xlarge w3-text-grey">Churn Rate</p>
+  </div>
+</div>
+
+<!-- Illustrazione Section -->
+<div id="tech" class="w3-center w3-white" style="height:500px">
+  <h1 class="bp-text-blue w3-center " style=" margin-top: 0px;">sono illustrazione</h1>
+</div>
+
+<!-- Who Trust Section -->
+<div class="w3-container w3-center w3-padding-64 w3-white" id="client">
+  <h1 class="w3-jumbo w3-center bp-text-blue w3-hide-small">Trusted by</h1>
+  <h1 class="w3-xxlarge w3-center bp-text-blue w3-hide-large w3-hide-medium">Trusted by</h1>
+  <div class="w3-row w3-center" id="clientLogos">
+    <div class="w3-third"><img src="./img/ntt.png" alt="NTT DATA"></div>
+    <div class="w3-third"><img src="./img/cisco.png" alt="CISCO"></div>
+    <div class="w3-third"><img src="./img/accenture.png" alt="accenture"></div>  
+  </div>
+</div>
+
+<!-- Solutions Section -->
+<div class="w3-container w3-center bp-blue" id="solutions">
+  <h1 class="w3-jumbo w3-center w3-text-white w3-hide-small">Optimize Marketing & CRM</h1>
+  <h1 class="w3-xxlarge w3-center w3-text-white w3-hide-large w3-hide-medium">Optimize Marketing & CRM</h1>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third">
+      <div class="w3-white w3-hover-shadow">
+        <header>
+          <h2 class="bp-text-blue">Profile Enrichment</h2>
+        </header>
+        <h4 class="w3-text-black">Enrich profiles of leads and customers</h3>
+        <p class="w3-text-grey">Add 50 data fields to poor leads and customers profiles. Append information about interests, job, education, income, housing and marital status to each customer or lead profile.</p>
+        <button class="w3-button goastBt-white w3-padding-large">Enrich profiles</button>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="w3-white w3-hover-shadow" >
+        <header>
+          <h2 class="bp-text-blue">Leads Scoring</h2>
+        </header>
+        <h4 class="w3-text-black">Target sales by purchase propensity</h3>
+        <p class="w3-text-grey">Score willingness to buy using the power of Profile Enrichment and Artificial Intelligence. Target sales, up-selling and cross-selling knowing the probability that a specific lead would buy a specific product.</p>
+        <button class="w3-button goastBt-white w3-padding-large">Predict buyers</button>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="w3-white w3-hover-shadow">
+        <header>
+          <h2 class="bp-text-blue">Churn Prediction</h2>
+        </header>
+        <h4 class="w3-text-black">Protect your Customer Base</h3>
+        <p class="w3-text-grey">Score willingness to leave using the power of Profile Enrichment and Artificial Intelligence. Boost anti-churn campaigns knowing the probability that a specific customer would leave a specific service.</p>
+        <button class="w3-button goastBt-white w3-padding-large">Predict churners</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Last Section -->
+<div class="w3-display-container w3-center" id="last">
+
+<video poster="./img/gray.jpg" id="videoGray" class="w3-grayscale" playsinline autoplay muted loop>
+    <source src="./img/gray.mp4">
+</video>
+
+  <div class="w3-display-middle" >
+    <h1 class="bp-text-blue">Unchain the power of<br>Profile Enrichment and AI Predictions</h1>
+    <p><a class="w3-button w3-padding-large w3-large w3-margin-top goastBt-white" onclick="document.getElementById('ticketModal').style.display='block'">Book a demo</a></p>
+  </div>
+
+  
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <p class="w3-text-grey">© 2017 Datafalls Srl | Via Costantino 73 00145 Roma (IT) | VAT/P.IVA/C.F.: 13802891005 | N.REA RM - 1474008 | datafalls@pec.sltassociati.it | CS: €10.000,00</p>
+  <div class="w3-xlarge w3-section w3-text-grey" id="social">   
+    <a href="https://www.facebook.com/BigProfiles/" target="_blank"><i class="fa fa-facebook-official bp-hover-text-blue"></i></a>
+    <a href="https://twitter.com/BigProfiles" target="_blank"><i class="fa fa-twitter bp-hover-text-blue"></i></a>
+    <a href="https://www.linkedin.com/company/bigprofiles" target="_blank"><i class="fa fa-linkedin bp-hover-text-blue"></i></a>   
+  </div>
+</footer>
+
+<!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      
+      <header class="w3-container w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button bp-text-blue w3-xxlarge w3-display-topright" >×</span>
+        <h2 class="w3-wide bp-text-blue">Contact our expert</h2>
+      </header>
+
+      <div class="w3-container">
+        
+        <input class="w3-input w3-border" type="text" placeholder="Your business email">
+        
+        <input class="w3-input w3-border" type="text" placeholder="Your message">
+
+        <button class="w3-button w3-block w3-padding-16 w3-center bp-bt-blue">Contact</button>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+//change navbar style when leave the 1st scene
+document.addEventListener('DOMContentLoaded', function() {
+  if(window.innerWidth < 600){
+      document.getElementById('logoText').classList.add('w3-display-topmiddle');
+    }
+
+  window.addEventListener('scroll', function(e) {
+    var scroll = window.scrollY;
+    var changePoint = document.getElementById('home').offsetHeight-document.getElementById('navbar').offsetHeight;
+    var navbar = document.getElementById("navbar");
+    if (scroll > changePoint) {     
+      navbar.classList.add('bp-text-blue');    
+      if(window.innerWidth > 600) {
+        navbar.classList.add('w3-white');
+        navbar.classList.add('w3-card');
+      }
+      else {
+         document.getElementById('sideBarIcon').classList.add('w3-white');
+         document.getElementById('sideBarIcon').classList.add('w3-card');
+      }
+      navbar.classList.add('w3-animate-top');
+    }
+    else { //<changePoint
+      navbar.classList.remove('bp-text-blue');
+      navbar.classList.remove('w3-white');
+      navbar.classList.remove('w3-card');
+      navbar.classList.remove('w3-animate-top');
+      document.getElementById('sideBarIcon').classList.remove('w3-white');
+      document.getElementById('sideBarIcon').classList.remove('w3-card');
+    }
+  })
+
+  window.addEventListener('resize', function(e){
+    if(window.innerWidth < 600){
+      document.getElementById('logoText').classList.add('w3-display-topmiddle');
+      document.getElementById('navbar').classList.remove('w3-card');
+      document.getElementById('navbar').classList.remove('w3-white');
+    }
+    else {
+      document.getElementById('logoText').classList.remove('w3-display-topmiddle');
+    }
+    
+  })
+  
+});
+
+
+</script>
+</html>
