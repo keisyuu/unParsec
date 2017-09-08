@@ -2,7 +2,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Quicksand', sans-serif; color: #666;}
 body, html {   
     height: 100%;
     line-height: 1.2;
-    overflow-x: hidden;
+}
+header {
+    overflow: hidden;
 }
 img {
   pointer-events: none;
@@ -104,12 +106,14 @@ img {
     min-height: 100%;
 }
 video {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;   
     min-height: 100%;
     width: 1920px;
     z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -158,6 +162,7 @@ video {
 }
 
 #last {
+    overflow:hidden; 
     height:750px;
     background-color: rgba(255, 255, 255, 0.6);
     /*background: url("../img/wow.png")  no-repeat center;*/
@@ -166,7 +171,6 @@ video {
 #videoGray {
     position: absolute;
     height: auto;
-    width:1920px;
     z-index: -99;
 }
 
