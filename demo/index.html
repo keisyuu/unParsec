@@ -32,12 +32,12 @@
   <div class="w3-bar w3-text-white" id="navbar">
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#tech" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Technology</a>
-      <a href="#solutions" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Solutions</a>
+      <a href="#tech" class="w3-bar-item w3-button"><i class="fa fa-id-card-o"></i> Technology</a>
+      <a href="#solutions" class="w3-bar-item w3-button"><i class="fa fa-sitemap"></i> Solutions</a>
       <a class="w3-bar-item w3-button" onclick="document.getElementById('ticketModal').style.display='block'"><i class="fa fa-envelope"></i> Contact Us</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-    <a href="javascript:void(0)" id="sideBarIcon" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium " onclick="w3_open()" >
+    <a href="javascript:void(0)" id="sideBarIcon" class="w3-bar-item w3-right w3-hide-large w3-hide-medium " onclick="w3_open()" >
       <i class="fa fa-bars"></i>
     </a>
   </div>
@@ -147,7 +147,6 @@
     <p><a class="w3-button w3-padding-large w3-large w3-margin-top goastBt-white" onclick="document.getElementById('ticketModal').style.display='block'">Book a demo</a></p>
   </div>
 
-
   
 </div>
 
@@ -214,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.classList.add('bp-text-blue');    
       if(window.innerWidth > 600) {
         navbar.classList.add('w3-white');
-        navbar.classList.add('w3-card-2');
+        navbar.classList.add('w3-card');
       }
       else {
          document.getElementById('sideBarIcon').classList.add('w3-white');
@@ -222,10 +221,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       navbar.classList.add('w3-animate-top');
     }
-    else {
+    else { //<changePoint
       navbar.classList.remove('bp-text-blue');
       navbar.classList.remove('w3-white');
-      navbar.classList.remove('w3-card-2');
+      navbar.classList.remove('w3-card');
       navbar.classList.remove('w3-animate-top');
       document.getElementById('sideBarIcon').classList.remove('w3-white');
       document.getElementById('sideBarIcon').classList.remove('w3-card');
@@ -235,6 +234,8 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function(e){
     if(window.innerWidth < 600){
       document.getElementById('logoText').classList.add('w3-display-topmiddle');
+      document.getElementById('navbar').classList.remove('w3-card');
+      document.getElementById('navbar').classList.remove('w3-white');
     }
     else {
       document.getElementById('logoText').classList.remove('w3-display-topmiddle');
